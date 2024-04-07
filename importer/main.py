@@ -794,7 +794,7 @@ def confirm_practitioner(user, user_id):
 def create_roles(role_list, roles_max):
     for role in role_list:
         current_role = str(role[0])
-        logging.debug("The current role is: " + current_role)
+        logging.info("The current role is: " + current_role)
 
         # check if role already exists
         role_response = handle_request(
@@ -828,7 +828,7 @@ def create_roles(role_list, roles_max):
                     "GET",
                     "",
                     config.keycloak_url
-                    + "/admin-ui-available-roles/roles/"
+                    + "/ui-ext/available-roles/roles/"
                     + role_id
                     + "?first=0&max="
                     + str(roles_max)
@@ -888,6 +888,8 @@ def get_group_id(group):
         # create the group
         create_group_payload = '{"name":"' + group + '"}'
         handle_request("POST", create_group_payload, config.keycloak_url + "/groups")
+        
+        logging.info("Group {} created",group)
         return get_group_id(group)
 
 
@@ -922,6 +924,7 @@ def assign_group_roles(role_list, group, roles_max):
         json_assign_payload,
         config.keycloak_url + "/groups/" + group_id + "/role-mappings/realm",
     )
+    logging.info("Role added to group " + group)
 
 
 def delete_resource(resource_type, resource_id, cascade):
@@ -1293,6 +1296,7 @@ def main(
             if group:
                 assign_group_roles(resource_list, group, roles_max)
             logging.info("Processing complete")
+            return
         elif setup == "clean_duplicates":
             logging.info("=========================================")
             logging.info(
