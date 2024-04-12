@@ -1,2 +1,2 @@
 firstName,lastName,username,email,userId,userType,enableUser,keycloakGroupId,keycloakGroupName,appId,password
-Jenn,Doe,Jenn,jendoe@example.com,,Supervisor,false,8aaa1719-a4b2-4b78-a116-efca752cbb46,Supervisor,app,pa$$word
+Test,User,chw0001,testuser@aicoe.com,,Supervisor,false,5fe1ad9f-9d9f-4478-903f-ba71428023de,Supervisor,app,password
