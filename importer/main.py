@@ -212,19 +212,49 @@ def create_user_resources(user_id, user):
         obj[2]["resource"]["code"] = {
             "coding": [
                 {
-                    "system": "http://snomed.info/sct",
-                    "code": "236321002",
-                    "display": "Supervisor (occupation)",
+                    "system": "https://midas.iisc.ac.in/fhir/practitioner-role-type",
+                    "code": "super-admin",
+                    "display": "Super Admin",
                 }
             ]
         }
-    elif userType.strip() == "Practitioner":
+    elif userType.strip() == "Specialist":
         obj[2]["resource"]["code"] = {
             "coding": [
                 {
-                    "system": "http://snomed.info/sct",
-                    "code": "405623001",
-                    "display": "Assigned practitioner",
+                    "system": "https://midas.iisc.ac.in/fhir/practitioner-role-type",
+                    "code": "specialist",
+                    "display": "Specialist",
+                }
+            ]
+        }
+    elif userType.strip() == "Senior Specialist":
+        obj[2]["resource"]["code"] = {
+             "coding": [
+                {
+                    "system": "https://midas.iisc.ac.in/fhir/practitioner-role-type",
+                    "code": "senior-specialist",
+                    "display": "Senior Specialist",
+                }
+            ]
+        }
+    elif userType.strip() == "Reader":
+        obj[2]["resource"]["code"] = {
+             "coding": [
+                {
+                    "system": "https://midas.iisc.ac.in/fhir/practitioner-role-type",
+                    "code": "reader",
+                    "display": "Reader",
+                }
+            ]
+        }
+    elif userType.strip() == "Front Line Worker":
+        obj[2]["resource"]["code"] = {
+             "coding": [
+                {
+                    "system": "https://midas.iisc.ac.in/fhir/practitioner-role-type",
+                    "code": "flw",
+                    "display": "Front Line Worker",
                 }
             ]
         }
