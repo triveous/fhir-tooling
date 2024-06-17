@@ -212,7 +212,7 @@ def create_user_resources(user_id, user):
         obj[2]["resource"]["code"] = {
             "coding": [
                 {
-                    "system": "https://midas.iisc.ac.in/fhir/practitioner-role-type",
+                    "system": "https://midas.iisc.ac.in/fhir/CodeSystem/practitioner-role-type",
                     "code": "super-admin",
                     "display": "Super Admin",
                 }
@@ -222,7 +222,7 @@ def create_user_resources(user_id, user):
         obj[2]["resource"]["code"] = {
             "coding": [
                 {
-                    "system": "https://midas.iisc.ac.in/fhir/practitioner-role-type",
+                    "system": "https://midas.iisc.ac.in/fhir/CodeSystem/practitioner-role-type",
                     "code": "specialist",
                     "display": "Specialist",
                 }
@@ -232,7 +232,7 @@ def create_user_resources(user_id, user):
         obj[2]["resource"]["code"] = {
              "coding": [
                 {
-                    "system": "https://midas.iisc.ac.in/fhir/practitioner-role-type",
+                    "system": "https://midas.iisc.ac.in/fhir/CodeSystem/practitioner-role-type",
                     "code": "senior-specialist",
                     "display": "Senior Specialist",
                 }
@@ -242,7 +242,7 @@ def create_user_resources(user_id, user):
         obj[2]["resource"]["code"] = {
              "coding": [
                 {
-                    "system": "https://midas.iisc.ac.in/fhir/practitioner-role-type",
+                    "system": "https://midas.iisc.ac.in/fhir/CodeSystem/practitioner-role-type",
                     "code": "reader",
                     "display": "Reader",
                 }
@@ -252,7 +252,7 @@ def create_user_resources(user_id, user):
         obj[2]["resource"]["code"] = {
              "coding": [
                 {
-                    "system": "https://midas.iisc.ac.in/fhir/practitioner-role-type",
+                    "system": "https://midas.iisc.ac.in/fhir/CodeSystem/practitioner-role-type",
                     "code": "flw",
                     "display": "Front Line Worker",
                 }
