@@ -1,2 +1,2 @@
 firstName,lastName,username,email,userId,userType,enableUser,keycloakGroupId,keycloakGroupName,appId,password
-Test,User,chw0001,testuser@aicoe.com,,Supervisor,false,5fe1ad9f-9d9f-4478-903f-ba71428023de,Supervisor,app,password
+Super,Admin,superadmin,superadmin@arogyam-midas.iisc.ac.in,arogyam-superadmin,Supervisor,true,a67009ad-e1e4-4a43-84ce-038406906d3b,Supervisor,app,password

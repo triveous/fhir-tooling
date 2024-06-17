@@ -134,3 +134,12 @@ The coverage report `coverage.html` will be at the working directory
 - The `limit` is the number of resources exported at a time. The set default value is '1000'
 - Specify the `resource_type` you want to export, different resource_types are exported to different csv_files
 - The csv_file containing the exported resources is labelled using the current time, to know when the resources were exported for example, csv/exports/2024-02-21-12-21-export_Location.csv
+
+
+### 9. Import CodeSystem
+- Inorder for FHIR server to support CodeSystem like SNOMED-CT or LOINC, we have to use the FHIR CLI which will upload the CodeSystem
+- We will need to download the relevant code system . For SNOMED CT Internval version, visit [https://www.nlm.nih.gov/healthit/snomedct/international.html](here) and for LOINC, visit [https://loinc.org/downloads/](here)
+- Download tht HAPI FHIR CLI from [https://github.com/hapifhir/hapi-fhir/releases](here)
+- Run the following command to upload SNOMED CT `./hapi-fhir-cli upload-terminology -d <Zip File Location> -v r4 -t <FHIR Base> -u http://snomed.info/sct`
+- Run the following command to upload LOINC.  `./hapi-fhir-cli upload-terminology -d <Zip File Location> -d <Update loincupload.properties> -v r4 -t <FHIR Base> -u http://snomed.info/sct`
+- You can find the `loincupload.properties` at [https://github.com/hapifhir/hapi-fhir/blob/master/hapi-fhir-jpaserver-base/src/main/resources/ca/uhn/fhir/jpa/term/loinc/loincupload.properties]. Fix needed for LOINC 2.72 onwards
