@@ -1,9 +1,9 @@
 client_id = 'admin-cli'
 client_secret = ''
 username = 'admin'
-password = 'EF75UsC5vP$t&T'
-access_token_url = 'https://auth.aicoe.triveous.tech/realms/master/protocol/openid-connect/token'
-fhir_base_url = 'http://localhost:8081/fhir'
-keycloak_url = 'https://auth.aicoe.triveous.tech/admin/realms/arogyam'
+password = 'kWrniRaO5px8LP'
+access_token_url = 'https://staging.arogyam-midas.iisc.ac.in/auth/realms/master/protocol/openid-connect/token'
+fhir_base_url = 'https://staging.arogyam-midas.iisc.ac.in/fhir'
+keycloak_url = 'https://staging.arogyam-midas.iisc.ac.in/auth/admin/realms/arogyam'
 access_token = None
 product_access_token = 'example-pr̀̀oduct-access-token'

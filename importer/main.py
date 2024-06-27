@@ -12,6 +12,8 @@ import magic
 from datetime import datetime
 from oauthlib.oauth2 import LegacyApplicationClient
 from requests_oauthlib import OAuth2Session
+import certifi
+import ssl
 
 try:
     import config
@@ -42,7 +44,6 @@ def read_csv(csv_file):
         except StopIteration:
             logging.error("Stop iteration on empty file")
 
-
 def get_access_token():
     access_token = ""
     if global_access_token:
@@ -69,7 +70,7 @@ def get_access_token():
             username=username,
             password=password,
             client_id=client_id,
-            client_secret=client_secret,
+            client_secret=client_secret
         )
         access_token = token["access_token"]
 
@@ -255,6 +256,26 @@ def create_user_resources(user_id, user):
                     "system": "https://midas.iisc.ac.in/fhir/CodeSystem/practitioner-role-type",
                     "code": "flw",
                     "display": "Front Line Worker",
+                }
+            ]
+        }
+    elif userType.strip() == "Site Coordinator":
+        obj[2]["resource"]["code"] = {
+             "coding": [
+                {
+                    "system": "https://midas.iisc.ac.in/fhir/CodeSystem/practitioner-role-type",
+                    "code": "site-coordinator",
+                    "display": "Site Coordinator",
+                }
+            ]
+        }
+    elif userType.strip() == "Site Admin":
+        obj[2]["resource"]["code"] = {
+             "coding": [
+                {
+                    "system": "https://midas.iisc.ac.in/fhir/CodeSystem/practitioner-role-type",
+                    "code": "site-admin",
+                    "display": "Site Admin",
                 }
             ]
         }

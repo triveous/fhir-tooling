@@ -6,5 +6,6 @@
             ],
             "url": "./fhir.schema.json"
         }
-    ]
+    ],
+    "java.compile.nullAnalysis.mode": "disabled"
   }

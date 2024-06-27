@@ -1,5 +1,7 @@
 firstName,lastName,username,email,userId,userType,enableUser,keycloakGroupId,keycloakGroupName,appId,password
 Super,Admin,superadmin,superadmin@arogyam-midas.iisc.ac.in,arogyam-superadmin,Supervisor,true,a67009ad-e1e4-4a43-84ce-038406906d3b,Supervisor,app,password
+Site,Admin,siteadmin,siteadmin@arogyam-midas.iisc.ac.in,siteadmin,Site Admin,true,442dd9e9-6918-4be0-9281-b692f7ccbb1e,Site Admin,app,password
+Site,Coordinator,sitecoordinator1,sitecoordinator1@arogyam-midas.iisc.ac.in,sitecoordinator1,Site Coordinator,true,fe3373da-3e72-47d3-915b-adad91a8596c,Site Coordinator,app,password
 FLW,User,flw1,flw1@arogyam-midas.iisc.ac.in,flw1,Front Line Worker,true,b4c2b016-5c5b-441f-9f28-f6a376407dea,Front Line Worker,app,password
 FLW,User,flw2,flw2@arogyam-midas.iisc.ac.in,flw2,Front Line Worker,true,b4c2b016-5c5b-441f-9f28-f6a376407dea,Front Line Worker,app,password
 Specialist,User,specialist1,sp1@arogyam-midas.iisc.ac.in,sp1,Specialist,true,028c9893-6b47-4cf2-bfd3-ed379967abca,Specialist,app,password
